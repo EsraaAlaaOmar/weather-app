@@ -6,8 +6,8 @@ const CurrentCondition = ({data}) => {
         {  !data ? '..loading' :<div class="current-conditions">
        
         <div>
-              <span>  </span>
-              {data.nearest_area&&data.nearest_area[0].areaName[0].value} 
+            <img className='weathe-icon' src={data.current_condition&&data.current_condition[0].weatherIconUrl[0].value}  alt='weather icon'/>
+            <span className='city-name'>  {data.nearest_area&&data.nearest_area[0].areaName[0].value} </span>
           </div>
           <div>
               <span> humidity  </span>
@@ -21,7 +21,7 @@ const CurrentCondition = ({data}) => {
               <span> visibility  </span>
               {data.current_condition&&data.current_condition[0].visibility}
           </div>
-          <img className='weathe-icon' src={data.current_condition&&data.current_condition[0].weatherIconUrl[0].value}  alt='weather icon'/>
+      
 
            
            
