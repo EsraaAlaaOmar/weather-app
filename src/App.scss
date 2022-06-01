@@ -1,0 +1,45 @@
+.nav{
+    display: flex;
+    background-color: #315f8e;
+    a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+        &:hover{
+            background-color: #abd4ff;
+            color: #315f8e;
+            font-weight: bold;
+          }
+        }
+
+}
+        
+.title{
+    text-align: center;
+    margin:20px 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #67a1de;
+    @media screen and (max-width: 700px) {
+        font-size: 24px;
+    }
+}
+.chart{
+    margin: auto;
+    width:70%;
+    svg{
+        width:100%;
+    }
+}
+.current-conditions{
+    width: 200px;
+    height:200px;
+    box-shadow: 0px 3px 6px #00000029;
+    margin:20px auto;
+    //padding:20px;
+    .weathe-icon{
+        width:100%;
+        
+    }
+}
