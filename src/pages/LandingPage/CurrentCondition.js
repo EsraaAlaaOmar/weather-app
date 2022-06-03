@@ -1,31 +1,50 @@
 import React from 'react'
+import {FiWind} from 'react-icons/fi'
+import {WiHumidity} from 'react-icons/wi'
+import {AiOutlineCloud} from 'react-icons/ai'
+import {HiOutlineLocationMarker} from 'react-icons/hi'
 
 const CurrentCondition = ({data}) => {
   return (
       <>
-        {  !data ? '..loading' :<div class="current-conditions">
-       
-        <div>
-            <img className='weathe-icon' src={data.current_condition&&data.current_condition[0].weatherIconUrl[0].value}  alt='weather icon'/>
-            <span className='city-name'>  {data.nearest_area&&data.nearest_area[0].areaName[0].value} </span>
-          </div>
-          <div>
-              <span> humidity  </span>
-              {data.current_condition&&data.current_condition[0].humidity}
-          </div>
-          <div>
-              <span> temp  </span>
-              {data.current_condition&&data.current_condition[0].temp_C} °C
-          </div>
-          <div>
-              <span> visibility  </span>
-              {data.current_condition&&data.current_condition[0].visibility}
-          </div>
-      
+     
+        {  !data ? '..loading' :
+        <div className="current-div">
+          <h4>You Are  in {data.nearest_area&&data.nearest_area[0].country[0].value} ..</h4>
+          <div class="current-conditions">
+          
+              <div>
+                  <img className='weather-icon' src={data.current_condition&&data.current_condition[0].weatherIconUrl[0].value}  alt='weather icon'/>
+                  <span className='temp'>  {data.current_condition&&data.current_condition[0].temp_C} °C </span>
+                </div>
+                <div className='city-name'>
+                    <span><HiOutlineLocationMarker/></span> {data.nearest_area&&data.nearest_area[0].areaName[0].value} 
+                </div>
+                <div className='properties'>
+                <div>
+                    <span> <WiHumidity />  </span>
+                    {data.current_condition&&data.current_condition[0].humidity}
+                </div>
+              
+                <div>
+                    <span> <AiOutlineCloud />  </span>
+                    {data.current_condition&&data.current_condition[0].cloudcover}%
+                </div>
+                <div>
+                    <span> <FiWind />  </span>
+                    {data.current_condition&&data.current_condition[0].windspeedKmph} km/h
+                </div>
 
-           
-           
-        </div> 
+            </div>
+            
+        
+
+              
+              
+          </div> 
+            
+        </div>
+       
         }
       </>
 

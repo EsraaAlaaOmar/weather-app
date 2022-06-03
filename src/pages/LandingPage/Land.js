@@ -46,9 +46,10 @@ setLong( position.coords.longitude);
     <>
 
       <Nav />
+      <CurrentCondition data={data} />
       <WeatherNext14day  data={data}/>
       <MonthlyAverageWeather data={data} />
-      <CurrentCondition data={data} />
+      
       <div id='demo'>
       
       </div>
