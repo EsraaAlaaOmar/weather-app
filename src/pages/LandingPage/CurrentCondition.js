@@ -20,6 +20,7 @@ const CurrentCondition = ({data}) => {
                 <div className='city-name'>
                     <span><HiOutlineLocationMarker/></span> {data.nearest_area&&data.nearest_area[0].areaName[0].value} 
                 </div>
+                <div className='weather-desc'> {data.current_condition&&data.current_condition[0].weatherDesc[0].value}</div>
                 <div className='properties'>
                 <div>
                     <span> <WiHumidity />  </span>
@@ -36,7 +37,7 @@ const CurrentCondition = ({data}) => {
                 </div>
 
             </div>
-            
+           
         
 
               

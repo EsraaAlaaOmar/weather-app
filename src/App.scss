@@ -53,13 +53,19 @@
         width:100%;
         font-size: 18px;
         margin: 40px 0;
+        margin-bottom: 30px;
         color: #676a6c;
         span{
             vertical-align:text-top;
         }
     }
-    .weather-icon{
-        // width:100%;
+
+    .weather-desc{
+        color: #074c92;
+        font-weight: bold;
+        text-align: center;
+        margin:20px 0;
+    
         
     }
     .properties{
