@@ -1,6 +1,10 @@
 .nav{
     display: flex;
     background-color: #315f8e;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
     a {
         color: white;
         padding: 14px 20px;
@@ -14,13 +18,15 @@
         }
 
 }
-        
+  h4{
+      margin:50px 0;
+  }      
 .title{
-    text-align: center;
-    margin:20px 0;
+   
+    margin:50px ;
     font-size: 30px;
     font-weight: bold;
-    color: #67a1de;
+    color: #315f8e;
     @media screen and (max-width: 700px) {
         font-size: 24px;
     }
@@ -37,7 +43,7 @@
     .current-conditions{
     width: 250px;
     box-shadow: 0px 3px 6px #00000029;
-    margin:20px auto;
+    margin:100px auto;
     padding-bottom:50px;
     color: #676a6c;
     .temp{
@@ -149,33 +155,25 @@ table{
     color: #707070;
     font-size: 16px;
     z-index: 100;
-   
+    // border-collapse: collapse;
+    // border-style: groove;
+    border-radius: 15px;
+    box-shadow: 0px 3px 6px #00000029;
+    margin-bottom: 50px;
 //more
 tr{
-.moreIcon{
+    border: solid 1px #e4e4e4 !important;
   
-    font-weight: bold;
-    cursor: pointer;
-    float: right;
-    position: relative;
-    button{
-        font-size: 24px;
-        background-color: #fff;
-        border: none;
-        color: #707070;
-    }
-   
-}
 }
     thead{
         font-size: 18px;
        margin: 100px;
-        border-bottom: .25px solid #e4e6e1cf;
-        border-top: .25px solid #e4e6e1cf;
+      
         th{
             font-weight: bold;
-            color: #adadadcf;
-            border: solid 1px gray !important;
+          
+            border: solid 1px #e4e4e4 !important;
+            padding:10px 0;
         }
     }
     td{
@@ -183,28 +181,13 @@ tr{
         font-weight: normal;
         max-width: 100%;
         position: relative;
-        border: solid 1px gray !important;
-        .no-data{
-            width: 30px;
-            max-width: 100%;
-            height: 2px;
-            background-color: #bebebc;
-            margin: auto;
-        
-        }
+        border: solid 1px #e4e4e4 !important;
+ 
         @media screen and (max-width: 767px) {
            padding:10px ;
         }
 
-        button{
-            border: none;
-            color: #fff;
-            background-color: #152F55;
-            width: 74px;
-            height: 30px;
-            font-size: 14px;
-            font-weight: 400;
-        }
+       
     }
     
 }

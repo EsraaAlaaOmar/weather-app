@@ -41,13 +41,13 @@ const MonthlyAverageWeather = ({data}) => {
           <div  ref={svg} className='chart' >
 
           <table>
-  <tr>
-    <th>Mounth </th>
-    <th>tempC</th>
-    <th>Daily Rain fall</th>
-  </tr>
-  {renderedTableRows}
-</table>
+            <thead>
+              <th>Mounth </th>
+              <th>temp  °C</th>
+              <th>Daily Rain fall</th>
+            </thead>
+            {renderedTableRows}
+          </table>
               
        </div>
    </>

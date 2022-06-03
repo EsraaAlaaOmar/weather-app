@@ -27,13 +27,34 @@ const Weather = ({data}) => {
               }))
           } 
       }, [data]);
-      
+          //tables in row 
+    const renderedTableRows = data.weather&&data.weather.map(day=>{
+      return( <tr>
+                <td>{day.date}</td>
+                <td>{day.maxtempC}</td>
+                <td>{day.sunHour}</td>
+              </tr>
+
+      )
+    })
       return (
         <>
            <div className="title">Weather Forcasting  Next  14 day </div>
+
+       
           <div  ref={svg} className='chart' >
-              
+            <table>
+              <thead>
+                <th>day </th>
+                <th>temp  °C</th>
+                <th>Sunny Hour</th>
+              </thead>
+              {renderedTableRows}
+            </table>
+                
               </div>
+
+
         
         </>
           
