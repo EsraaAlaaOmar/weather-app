@@ -24,11 +24,30 @@ const MonthlyAverageWeather = ({data}) => {
             }))
         } 
     }, [data]);
-    
+
+    //tables in row 
+    const renderedTableRows = data.ClimateAverages&&data.ClimateAverages[0].month.map(mounth=>{
+      return( <tr>
+                <td>{mounth.name}</td>
+                <td>{mounth.absMaxTemp}</td>
+                <td>{mounth.avgDailyRainfall*100} %</td>
+              </tr>
+
+      )
+    })
   return (
    <>
       <div className="title">Monthely Averages Weather  </div>
           <div  ref={svg} className='chart' >
+
+          <table>
+  <tr>
+    <th>Mounth </th>
+    <th>tempC</th>
+    <th>Daily Rain fall</th>
+  </tr>
+  {renderedTableRows}
+</table>
               
        </div>
    </>

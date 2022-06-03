@@ -5,6 +5,7 @@ import axios from 'axios'
 import WeatherNext14day from './WeatherNext14day'
 import MonthlyAverageWeather from './MonthlyAverageWeather'
 import CurrentCondition from './CurrentCondition'
+import CountryCities from './CountryCities'
 const Land = () => {
     const [data, setData] = useState([]);
     const[long,setLong] = useState()
@@ -47,6 +48,7 @@ setLong( position.coords.longitude);
 
       <Nav />
       <CurrentCondition data={data} />
+      <CountryCities country={data.nearest_area&&data.nearest_area[0].country[0].value} />
       <WeatherNext14day  data={data}/>
       <MonthlyAverageWeather data={data} />
       
