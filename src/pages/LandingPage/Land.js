@@ -48,7 +48,7 @@ setLong( position.coords.longitude);
 {!data ?  'loading .. '
 
     :  <div>
-          <Nav />
+          <Nav cities={true} />
           <CurrentCondition data={data} />
           <CountryCities country={data.nearest_area&&data.nearest_area[0].country[0].value} />
           <WeatherNext14day  data={data}/>

@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.scss';
 import Land from './pages/LandingPage/Land';
-import { Route, Routes ,BrowserRouter as Router, ScrollToTop} from 'react-router-dom'
+import { Route, Routes ,BrowserRouter as Router} from 'react-router-dom'
 import CityWeather from './pages/CityPage/CityWeather';
+import ScrollToTop from './pages/ScrollToTop';
 
 function App() {
   return (
