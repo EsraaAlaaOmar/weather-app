@@ -4,13 +4,13 @@ import {WiHumidity} from 'react-icons/wi'
 import {AiOutlineCloud} from 'react-icons/ai'
 import {HiOutlineLocationMarker} from 'react-icons/hi'
 
-const CurrentCondition = ({data}) => {
+const CurrentCondition = ({data, city}) => {
   return (
       <>
      
         {  !data ? '..loading' :
         <div id='current' className="current-div">
-          <h4>You Are  in {data.nearest_area&&data.nearest_area[0].country[0].value} ..</h4>
+          <h4>{city?"country is":"You Are  in"} {data.nearest_area&&data.nearest_area[0].country[0].value} ..</h4>
           <div class="current-conditions">
           
               <div>

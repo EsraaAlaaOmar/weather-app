@@ -36,9 +36,9 @@ const CityWeather = () => {
     
   
     {!data ?  'loading .. '
-    : data.error?<div className='errormsg'> this city Name dosent exist in this system you can try longitud, lattitude  or your ip</div> :<div>
+    : data.error?<div className='errormsg'> This city Name dosent exist in this system you can try longitud, lattitude  or your ip</div> :<div>
           <Nav />
-          <CurrentCondition data={data} />
+          <CurrentCondition data={data}  city={true}/>
           <Weather  data={data}/>
           <MonthlyAverageWeather data={data} />
          

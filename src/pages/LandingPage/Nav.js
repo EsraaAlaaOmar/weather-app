@@ -7,9 +7,10 @@ const Nav = ({cities}) => {
       
       
        <a href='#current'><span> Current Weather</span></a>
-       {cities&&<a href='#cities'><span> Cities</span></a>}
+      
        <a href='#weather'><span> Next 14 day weather</span></a>
        <a href='#mounthly'><span> Monthly Climate Averages</span></a>
+       {cities&&<a href='#cities'><span> Cities</span></a>}
       
      
 
