@@ -9,7 +9,7 @@ const CurrentCondition = ({data}) => {
       <>
      
         {  !data ? '..loading' :
-        <div className="current-div">
+        <div id='current' className="current-div">
           <h4>You Are  in {data.nearest_area&&data.nearest_area[0].country[0].value} ..</h4>
           <div class="current-conditions">
           

@@ -4,6 +4,7 @@ import {  useParams } from 'react-router-dom';
 import CurrentCondition from '../LandingPage/CurrentCondition';
 import MonthlyAverageWeather from '../LandingPage/MonthlyAverageWeather';
 import Weather from '../LandingPage/WeatherNext14day';
+import Nav from '../LandingPage/Nav';
 const CityWeather = () => {
     let { city }  = useParams();
    
@@ -33,15 +34,16 @@ const CityWeather = () => {
       return (
         <>
     
-         
+  
+    {!data ?  'loading .. '
+    : data.error?<div className='errormsg'> this city Name dosent exist in this system you can try longitud, lattitude  or your ip</div> :<div>
+          <Nav />
           <CurrentCondition data={data} />
-          <Weather  data={data} />
-          <MonthlyAverageWeather  data={data}/>
-       
-          
-          <div id='demo'>
-          
-          </div>
+          <Weather  data={data}/>
+          <MonthlyAverageWeather data={data} />
+         
+      </div>}
+      
           
         </>
       )

@@ -45,16 +45,16 @@ setLong( position.coords.longitude);
         )
   return (
     <>
+{!data ?  'loading .. '
 
-      <Nav />
-      <CurrentCondition data={data} />
-      <CountryCities country={data.nearest_area&&data.nearest_area[0].country[0].value} />
-      <WeatherNext14day  data={data}/>
-      <MonthlyAverageWeather data={data} />
-      
-      <div id='demo'>
-      
-      </div>
+    :  <div>
+          <Nav />
+          <CurrentCondition data={data} />
+          <CountryCities country={data.nearest_area&&data.nearest_area[0].country[0].value} />
+          <WeatherNext14day  data={data}/>
+          <MonthlyAverageWeather data={data} />
+         
+      </div>}
       
     </>
   )

@@ -38,8 +38,8 @@ const Weather = ({data}) => {
       )
     })
       return (
-        <>
-           <div className="title">Weather Forcasting  Next  14 day </div>
+        <div  id='weather'>
+           <div  className="title">Weather Forcasting  Next  14 day </div>
 
        
           <div  ref={svg} className='chart' >
@@ -56,7 +56,7 @@ const Weather = ({data}) => {
 
 
         
-        </>
+        </div>
           
       );
       

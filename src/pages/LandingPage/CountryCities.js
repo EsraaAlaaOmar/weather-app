@@ -28,7 +28,7 @@ const renderedCities=searchResult&&searchResult.map(city=>{
   </div>
 })
   return (
-    <div className="cities-dev">
+    <div id='cities' className="cities-dev">
        <h4>List of cities for your country </h4>
        <input placeholder=" search with name or long,lat or IP  " type="search" onChange={(e)=>onChange(e)} />
         <div className="cities">
