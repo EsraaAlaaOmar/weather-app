@@ -43,7 +43,7 @@ const MonthlyAverageWeather = ({data}) => {
           <table>
             <thead>
               <th>Mounth </th>
-              <th>temp  °C</th>
+              <th>average temp  °C</th>
               <th>Daily Rain fall</th>
             </thead>
             {renderedTableRows}

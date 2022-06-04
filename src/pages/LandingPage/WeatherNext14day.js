@@ -31,7 +31,7 @@ const Weather = ({data}) => {
     const renderedTableRows = data.weather&&data.weather.map(day=>{
       return( <tr>
                 <td>{day.date}</td>
-                <td>{day.maxtempC}</td>
+                <td>{day.avgtempC}</td>
                 <td>{day.sunHour}</td>
               </tr>
 
@@ -46,7 +46,7 @@ const Weather = ({data}) => {
             <table>
               <thead>
                 <th>day </th>
-                <th>temp  °C</th>
+                <th>average temp  °C</th>
                 <th>Sunny Hour</th>
               </thead>
               {renderedTableRows}
