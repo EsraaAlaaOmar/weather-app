@@ -36,8 +36,8 @@ const MonthlyAverageWeather = ({data}) => {
       )
     })
   return (
-   <>
-      <div id='mounthly' className="title">Monthely Averages Weather  </div>
+   <div id='mounthly'>
+      <div  className="title">Monthely Averages Weather  </div>
           <div  ref={svg} className='chart' >
 
           <table>
@@ -50,7 +50,7 @@ const MonthlyAverageWeather = ({data}) => {
           </table>
               
        </div>
-   </>
+   </div>
   )
 }
 

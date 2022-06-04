@@ -46,7 +46,7 @@ setLong( position.coords.longitude);
   return (
     <>
 {!data ?  'loading .. '
-
+:!long ? <div className='errormsg'>Please Allow Location in Your Device </div>
     :  <div>
           <Nav cities={true} />
           <CurrentCondition data={data} />
